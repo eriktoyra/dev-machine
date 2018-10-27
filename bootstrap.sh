@@ -8,16 +8,28 @@ describe_step () {
 }
 
 # ------------------------------------------------------------------------------
+# Verify that xcode-select is installed
+# ------------------------------------------------------------------------------
+describe_step "Verify that xcode-select is installed."
+xcode-select -p > /dev/null
+if [[ $? != 0 ]] ; then
+  echo -e "xcode-select is not installed, installing."
+  xcode-select --install
+else
+  echo -e "xcode-select already installed, skipping."
+fi
+
+# ------------------------------------------------------------------------------
 # Install, or update, Homebrew
 # ------------------------------------------------------------------------------
 which -s brew
 if [[ $? != 0 ]] ; then
   # Install Homebrew
-  describe_step "Homebrew not installed. Installing..."
+  describe_step "Homebrew not installed. Installing."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   # Homebrew already intalled, update
-  describe_step "Homebrew already installed. Attempts updating..."
+  describe_step "Homebrew already installed. Attempts updating."
   brew update
 fi
 
