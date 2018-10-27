@@ -1,0 +1,3 @@
+#- src: git+ssh://git-u@gitea.stendahls.net/galaxy/ddp.resin-conf
+#  version: master
+#  scm: git
