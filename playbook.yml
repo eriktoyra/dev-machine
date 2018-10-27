@@ -1,11 +1,8 @@
 ---
 
-- hosts: all
+- hosts: localhost
   connection: local
   debugger: on_failed
-
-  become: yes
-  become_user: root
 
   pre_tasks:
     - name: Load local override variables
@@ -15,3 +12,4 @@
         extensions: [yml]
 
   roles:
+    - role: ansible-role.oh-my-zsh

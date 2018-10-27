@@ -3,3 +3,8 @@
 # Template file for local variable overrides. All variables added here should
 # override their counterpart in the play and the included roles defaults.
 # Copy this file to local-vars.yml and customize as you see fit.
+
+# configure_dotfiles: yes
+# configure_terminal: yes
+# configure_applications: yes
+# configure_osx: yes
