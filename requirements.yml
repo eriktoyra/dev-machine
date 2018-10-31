@@ -1,3 +1,7 @@
+- src: git@github.com:eriktoyra/ansible-role.applications.git
+  version: master
+  scm: git
+
 - src: git@github.com:eriktoyra/ansible-role.oh-my-zsh.git
   version: master
   scm: git
