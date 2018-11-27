@@ -18,6 +18,12 @@ Install Ansible roles not present in this repo.
 ansible-galaxy install -r requirements.yml
 ```
 
+Configure `./vars/` config files and then run:
+
+```
+ansible-playbook playbook.yml
+```
+
 ## Development
 
 To check the syntax of the `playbook.yml` file, run
