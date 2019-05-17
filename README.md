@@ -8,19 +8,19 @@ Tested on _macOS 10.12.x_.
 
 By running the line below, you'll start bootstrapping my development machine on your local machine.
 
-```
+```bash
 bash <(curl -s https://raw.githubusercontent.com/eriktoyra/dev-machine/master/bootstrap.sh)
 ```
 
 Install Ansible roles not present in this repo.
 
-```
+```bash
 ansible-galaxy install -r requirements.yml
 ```
 
 Configure `./vars/` config files and then run:
 
-```
+```bash
 ansible-playbook playbook.yml
 ```
 
@@ -28,4 +28,3 @@ ansible-playbook playbook.yml
 
 To check the syntax of the `playbook.yml` file, run
 `ansible-playbook playbook.yml --syntax-check`.
-
