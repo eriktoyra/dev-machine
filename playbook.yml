@@ -15,5 +15,8 @@
     - role: ansible-role.oh-my-zsh
       when: configure_oh_my_zsh
 
+    - role: ansible-role.dotfiles
+      when: configure_dotfiles
+
     - role: ansible-role.applications
       when: configure_applications
