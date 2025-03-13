@@ -26,7 +26,7 @@ which -s brew
 if [[ $? != 0 ]] ; then
   # Install Homebrew
   describe_step "Homebrew not installed. Installing."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   # Homebrew already intalled, update
   describe_step "Homebrew already installed. Attempts updating."
